@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        node {
-            label 'doker'
-        }
-   }
+    agent any
 
     stages {
         stage('Test') {
@@ -12,14 +8,8 @@ pipeline {
     }
 }
 
-
 pipeline {
-    agent {
-        node {
-            label 'doker'
-        }
-   }
-
+    agent any
 
     stages {
         stage('Test') {
@@ -31,13 +21,9 @@ pipeline {
 }
 
 
-pipeline {
-    agent {
-        node {
-            label 'doker'
-        }
-   }
 
+pipeline {
+    agent any
 
     stages {
         stage('Test') {
@@ -55,12 +41,7 @@ pipeline {
 
 
 pipeline {
-    agent {
-        node {
-            label 'doker'
-        }
-   }
-
+    agent any
 
     parameters {
         booleanParam(name: "RUN_INTEGRATION_TESTS", defaultValue: true)
